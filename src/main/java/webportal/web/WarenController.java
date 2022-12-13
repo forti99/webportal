@@ -16,8 +16,8 @@ public class WarenController {
 
     private final WareService wareService;
 
-    public WarenController(WareService wareService, WareService wareService1) {
-        this.wareService = wareService1;
+    public WarenController(WareService wareService) {
+        this.wareService = wareService;
     }
 
     @GetMapping("/waren")
