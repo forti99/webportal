@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Waren anbieten</title>
@@ -10,7 +10,7 @@
 </div>
 <div>
     <form name="forms" id="forms">
-        <label>Name des Produkts:
+        <label>Name des Mitgliedes:
             <input name="name" type="text"/>
         </label><br>
         <label>Anzahl verfügbarer Produkte:
@@ -39,7 +39,7 @@
             if (valid) {
                 const result = getFormJSON(formElement);
                 $.ajax({
-                    url: 'http://localhost:8080/waren/anbieten',
+                    url: 'http://localhost:8080/mitglied/registrieren',
                     type: 'POST',
                     contentType: 'application/json; charset=utf-8',
                     data: JSON.stringify(result)

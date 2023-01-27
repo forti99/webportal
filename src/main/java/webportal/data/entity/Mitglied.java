@@ -5,14 +5,14 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ware")
-public class Ware {
+@Table(name = "mitglied")
+public class Mitglied {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long wareId;
+    private Long mitgliedId;
 
     @NotNull
-    @Column(name = "warenname", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "anzahl", columnDefinition = "TEXT")
@@ -21,12 +21,12 @@ public class Ware {
     @Column(name = "preis", columnDefinition = "TEXT")
     private String price;
 
-    public Long getWareId() {
-        return wareId;
+    public Long getMitgliedId() {
+        return mitgliedId;
     }
 
-    public void setWareId(Long wareId) {
-        this.wareId = wareId;
+    public void setMitgliedId(Long wareId) {
+        this.mitgliedId = wareId;
     }
 
     public String getName() {

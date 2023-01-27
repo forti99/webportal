@@ -1,18 +1,18 @@
 package webportal.data.repository;
 
-import webportal.data.entity.Ware;
+import webportal.data.entity.Mitglied;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface WareRepository extends JpaRepository<Ware, Long> {
+public interface MitgliedRepository extends JpaRepository<Mitglied, Long> {
 
-    Ware findByWareId(Long postId);
+    Mitglied findByMitgliedId(Long postId);
 
     @Override
-    List<Ware> findAll();
+    List<Mitglied> findAll();
 
 }
 

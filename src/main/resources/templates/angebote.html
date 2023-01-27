@@ -12,9 +12,9 @@
     <form name="forms" id="forms">
         <button type="submit">Alle Angebote anzeigen</button>
     </form>
-    <table id="ware">
+    <table id="mitglied">
         <tr>
-            <th style="width:33.33%">Artikelname</th>
+            <th style="width:33.33%">Name des Mitgliedes</th>
             <th style="width:33.33%">Preis</th>
             <th style="width:33.33%">Verfügbare Menge</th>
         </tr>
@@ -26,8 +26,8 @@
             event.preventDefault();
             const valid = formElement.reportValidity();
             if (valid) {
-                $.get("http://localhost:8080/waren/abrufen", null, function (data) {
-                    var mainContainer = document.getElementById("ware");
+                $.get("http://localhost:8080/mitglied/abrufen", null, function (data) {
+                    var mainContainer = document.getElementById("mitglied");
                     for (var i = 0; i < data.length; i++) {
                         var tr = document.createElement("tr");
                         var td1 = document.createElement("td");
@@ -50,7 +50,7 @@
 </div>
 <div id="footer">
     <p>Zur Startseite: <a href="/">Startseite</a></p>
-    <p>Waren anbieten: <a href="/waren">Waren anbieten</a></p>
+    <p>Waren anbieten: <a href="/mitglieder">Waren anbieten</a></p>
 </div>
 </body>
 </html>
