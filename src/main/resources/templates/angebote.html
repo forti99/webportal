@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang ="de">
+<html lang="de">
 <head>
     <title>Angebote</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -14,9 +14,10 @@
     </form>
     <table id="mitglied">
         <tr>
-            <th style="width:33.33%">Name des Mitgliedes</th>
-            <th style="width:33.33%">Preis</th>
-            <th style="width:33.33%">Verfügbare Menge</th>
+            <th style="width:25%">Vorname</th>
+            <th style="width:25%">Nachname</th>
+            <th style="width:25%">Alter</th>
+            <th style="width:25%">Adresse</th>
         </tr>
     </table>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -33,13 +34,16 @@
                         var td1 = document.createElement("td");
                         var td2 = document.createElement("td");
                         var td3 = document.createElement("td");
-                        td1.innerHTML = data[i].name;
-                        td2.innerHTML = data[i].price;
-                        td3.innerHTML = data[i].amount;
+                        var td4 = document.createElement("td");
+                        td1.innerHTML = data[i].vorname;
+                        td2.innerHTML = data[i].name;
+                        td3.innerHTML = data[i].alter;
+                        td4.innerHTML = data[i].adresse;
                         mainContainer.appendChild(tr);
                         tr.appendChild(td1);
                         tr.appendChild(td2);
                         tr.appendChild(td3);
+                        tr.appendChild(td4);
                     }
                     console.log(data)
                 })

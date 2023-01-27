@@ -12,14 +12,18 @@ public class Mitglied {
     private Long mitgliedId;
 
     @NotNull
+    @Column(name = "vorname", nullable = false)
+    private String vorname;
+
+    @NotNull
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "anzahl", columnDefinition = "TEXT")
-    private String amount;
+    @Column(name = "alter", columnDefinition = "TEXT")
+    private String alter;
 
-    @Column(name = "preis", columnDefinition = "TEXT")
-    private String price;
+    @Column(name = "adresse", columnDefinition = "TEXT")
+    private String adresse;
 
     public Long getMitgliedId() {
         return mitgliedId;
@@ -27,6 +31,14 @@ public class Mitglied {
 
     public void setMitgliedId(Long wareId) {
         this.mitgliedId = wareId;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public void setVorname(String vorname) {
+        this.vorname = vorname;
     }
 
     public String getName() {
@@ -37,20 +49,20 @@ public class Mitglied {
         this.name = name;
     }
 
-    public String getAmount() {
-        return amount;
+    public String getAlter() {
+        return alter;
     }
 
-    public void setAmount(String amount) {
-        this.amount = amount;
+    public void setAlter(String amount) {
+        this.alter = amount;
     }
 
-    public String getPrice() {
-        return price;
+    public String getAdresse() {
+        return adresse;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setAdresse(String price) {
+        this.adresse = price;
     }
 }
 
