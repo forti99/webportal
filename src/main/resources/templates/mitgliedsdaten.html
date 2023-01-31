@@ -30,6 +30,9 @@
             if (valid) {
                 $.get("http://localhost:8080/mitglied/abrufen", null, function (data) {
                     var mainContainer = document.getElementById("mitglied");
+                    var saveTr = mainContainer.firstElementChild;
+                    mainContainer.innerHTML = "";
+                    mainContainer.appendChild(saveTr);
                     for (var i = 0; i < data.length; i++) {
                         var tr = document.createElement("tr");
                         var td1 = document.createElement("td");
