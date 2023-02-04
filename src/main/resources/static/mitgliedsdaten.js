@@ -1,7 +1,6 @@
-const getMemberButton = document.getElementById('getMember')
-const getDataHandler = (event) => {
+const getAllMitgliederDaten = (event) => {
     event.preventDefault();
-    $.get("http://localhost:8080/mitglied/abrufen", null, function (data) {
+    $.get("http://localhost:8080/mitglied/alleAbrufen", null, function (data) {
         var mainContainer = document.getElementById("mitglied");
         var saveTr = mainContainer.firstElementChild;
         mainContainer.innerHTML = "";
@@ -25,4 +24,4 @@ const getDataHandler = (event) => {
         console.log(data)
     })
 }
-getMemberButton.addEventListener('click', getDataHandler)
+document.getElementById('getAllMitglieder').addEventListener('click', getAllMitgliederDaten);

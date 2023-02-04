@@ -31,7 +31,12 @@ public class MitgliedController {
         return new ResponseEntity<>(mitglied, HttpStatus.CREATED);
     }
 
-    @GetMapping("/mitglied/abrufen")
+    @GetMapping("/mitglied/abrufenNachId")
+    public ResponseEntity<Mitglied> getMitgliedById(Long id) {
+        return new ResponseEntity<>(mitgliedService.getMitgliedById(id), HttpStatus.OK);
+    }
+
+    @GetMapping("/mitglied/alleAbrufen")
     public ResponseEntity<List<Mitglied>> getAllMitglieder() {
         return new ResponseEntity<>(mitgliedService.getAllMitglieder(), HttpStatus.OK);
     }

@@ -23,6 +23,10 @@ public class MitgliedService {
         return getMitgliedRepository().findAll();
     }
 
+    public Mitglied getMitgliedById(Long id) {
+        return mitgliedRepository.getById(id);
+    }
+
     public void deleteMitglied(Mitglied mitglied) {
         getMitgliedRepository().delete(mitglied);
     }
