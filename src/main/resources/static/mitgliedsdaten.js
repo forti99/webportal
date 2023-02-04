@@ -1,7 +1,7 @@
-const getAllMitgliederDaten = (event) => {
+const showAllMitglieder = (event) => {
     event.preventDefault();
     $.get("http://localhost:8080/mitglied/alleAbrufen", null, function (data) {
-        var mainContainer = document.getElementById("mitglied");
+        var mainContainer = document.getElementById("mitglieder");
         var saveTr = mainContainer.firstElementChild;
         mainContainer.innerHTML = "";
         mainContainer.appendChild(saveTr);
@@ -24,4 +24,10 @@ const getAllMitgliederDaten = (event) => {
         console.log(data)
     })
 }
-document.getElementById('getAllMitglieder').addEventListener('click', getAllMitgliederDaten);
+
+function hideAllMitglieder() {
+    document.getElementById("mitglieder").innerHTML = "";
+}
+
+document.getElementById('getAllMitglieder').addEventListener('click', showAllMitglieder);
+document.getElementById('hideAllMitglieder').addEventListener('click', hideAllMitglieder);

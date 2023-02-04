@@ -5,14 +5,14 @@ body {
 /* Ueberschriften */
 h1 {
     background-color: #34495e;
-    color: white;
+    color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 /* Links */
 a {
-    color: #ffffff;
+    color: #fff;
 }
 
 /* Buttons */
@@ -61,6 +61,15 @@ th {
 
 tr:nth-child(even) {
     background-color: #ecf0f1;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    background-color: #34495e;
 }
 
 
