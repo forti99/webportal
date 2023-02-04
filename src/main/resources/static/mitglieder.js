@@ -15,7 +15,7 @@ const saveMitgliedDaten = (event) => {
         contentType: 'application/json; charset=utf-8',
         data: JSON.stringify(result)
     });
-    console.log(result)
+    console.log(result);
 }
 
 document.getElementById('saveMember').addEventListener('click', saveMitgliedDaten);

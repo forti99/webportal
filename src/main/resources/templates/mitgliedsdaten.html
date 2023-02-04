@@ -14,7 +14,6 @@
 <div>
     <form>
         <button type="submit" id="getAllMitglieder">Alle Mitglieder anzeigen</button>
-        <button type="submit" id="hideAllMitglieder">Alle Mitglieder verbergen</button>
     </form>
     <table id="mitglieder">
         <tr>
@@ -25,6 +24,24 @@
         </tr>
     </table>
 </div>
+<div>
+    <h1>Hier sehen sie ausgewählte Mitglieder und ihre Daten</h1>
+</div>
+<div>
+    <form>
+        <input name="Mitglieds-Id" id="idMitglied" type="number" placeholder="Mitglieds-Id eingeben"/>
+        <button type="submit" id="getMitgliedById">Mitglied anzeigen</button>
+    </form>
+    <table id="mitglied">
+        <tr>
+            <th style="width:25%">Vorname</th>
+            <th style="width:25%">Nachname</th>
+            <th style="width:25%">Alter</th>
+            <th style="width:25%">Adresse</th>
+        </tr>
+    </table>
+</div>
+<button type="submit" id="hideAllMitglieder">Alle Mitglieder verbergen</button>
 <footer>
     <p><a href="/">Startseite</a></p>
     <p><a href="/mitglieder">Registrieren</a></p>

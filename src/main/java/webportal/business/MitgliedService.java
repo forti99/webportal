@@ -24,7 +24,7 @@ public class MitgliedService {
     }
 
     public Mitglied getMitgliedById(Long id) {
-        return mitgliedRepository.getById(id);
+        return mitgliedRepository.findByMitgliedId(id);
     }
 
     public void deleteMitglied(Mitglied mitglied) {

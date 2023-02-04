@@ -1,5 +1,6 @@
 package webportal.web;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import webportal.business.MitgliedService;
 import webportal.data.entity.Mitglied;
 import org.springframework.http.HttpStatus;
@@ -31,9 +32,9 @@ public class MitgliedController {
         return new ResponseEntity<>(mitglied, HttpStatus.CREATED);
     }
 
-    @GetMapping("/mitglied/abrufenNachId")
-    public ResponseEntity<Mitglied> getMitgliedById(Long id) {
-        return new ResponseEntity<>(mitgliedService.getMitgliedById(id), HttpStatus.OK);
+    @GetMapping("/mitglied/abrufenNachId/{mitgliedId}")
+    public ResponseEntity<Mitglied> getMitgliedById(@PathVariable Long mitgliedId) {
+        return new ResponseEntity<>(mitgliedService.getMitgliedById(mitgliedId), HttpStatus.OK);
     }
 
     @GetMapping("/mitglied/alleAbrufen")
