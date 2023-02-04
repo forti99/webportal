@@ -1,5 +1,15 @@
 version: '3.1'
 services:
+  PostgreSQL:
+    image: 'postgres'
+    container_name: 'portaldb'
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+
   Web:
     image: 'web-portal.jar'
     container_name: 'portalweb'
@@ -11,15 +21,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=password
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
 
-  PostgreSQL:
-    image: 'postgres'
-    container_name: 'portaldb'
-    ports:
-      - "5432:5432"
-    environment:
-      - POSTGRES_PASSWORD=password
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
+
 
 
 
