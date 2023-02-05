@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Table(name = "mitglied")
 public class Mitglied {
     @Id
+    @Column(name = "mitgliedId", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long mitgliedId;
 
