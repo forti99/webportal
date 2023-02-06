@@ -21,8 +21,8 @@ const saveMitgliedDaten = (event) => {
 
 const showOneMitglieder = (event) => {
     event.preventDefault();
-    let mitgliedId = parseFloat(document.getElementById("idMitglied").value);
-    $.get(`http://localhost:8080/mitgliederverwaltung/abrufenNachId/${mitgliedId}`, null, function (data) {
+    let id = parseFloat(document.getElementById("idMitglied").value);
+    $.get(`http://localhost:8080/mitgliederverwaltung/abrufenNachId/${id}`, null, function (data) {
         const mainContainer = document.getElementById("mitglied");
         const saveTr = mainContainer.firstElementChild;
         mainContainer.innerHTML = "";
@@ -34,20 +34,38 @@ const showOneMitglieder = (event) => {
         const td3 = document.createElement("td");
         const td4 = document.createElement("td");
         const td5 = document.createElement("td");
+        const td6 = document.createElement("td");
+        const td7 = document.createElement("td");
         td1.innerHTML = data.mitgliedId;
         td2.innerHTML = data.vorname;
         td3.innerHTML = data.name;
-        td4.innerHTML = data.alter;
-        td5.innerHTML = data.adresse;
+        td4.innerHTML = data.adresse;
+        td5.innerHTML = data.alter;
+        td6.innerHTML = data.beitrag;
+        td7.innerHTML = data.eintrittsalter;
+
         mainContainer.appendChild(tr);
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
         tr.appendChild(td4);
         tr.appendChild(td5);
+        tr.appendChild(td6);
+        tr.appendChild(td7);
         console.log(data);
     })
 }
 
-document.getElementById('saveMember').addEventListener('click', saveMitgliedDaten);
-document.getElementById('getMitgliedById').addEventListener('click', showOneMitglieder);
+const deleteMitgliedById = (event) => {
+    event.preventDefault();
+    let id = parseFloat(document.getElementById("id").value);
+
+    $.post(`http://localhost:8080//mitgliederverwaltung/loeschenNachId/${id}`, null, function (data) {
+        document.getElementById("ergebnisRente").value = data;
+        console.log(data);
+    })
+}
+
+document.getElementById("saveMember").addEventListener('click', saveMitgliedDaten);
+document.getElementById("getMitgliedById").addEventListener('click', showOneMitglieder);
+document.getElementById("deleteMitgliedById").addEventListener('click', deleteMitgliedById);

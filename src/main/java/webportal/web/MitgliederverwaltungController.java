@@ -30,9 +30,14 @@ public class MitgliederverwaltungController {
         return new ResponseEntity<>(mitglied, HttpStatus.CREATED);
     }
 
-    @GetMapping("/mitgliederverwaltung/abrufenNachId/{mitgliedId}")
-    public ResponseEntity<Mitglied> getMitgliedById(@PathVariable Long mitgliedId) {
-        return new ResponseEntity<>(mitgliederverwaltungService.getMitgliedById(mitgliedId), HttpStatus.OK);
+    @GetMapping("/mitgliederverwaltung/abrufenNachId/{id}")
+    public ResponseEntity<Mitglied> getMitgliedById(@PathVariable Long id) {
+        return new ResponseEntity<>(mitgliederverwaltungService.getMitgliedById(id), HttpStatus.OK);
+    }
+
+    @PostMapping("/mitgliederverwaltung/loeschenNachId/{id}")
+    public void deleteMitgliedById(@PathVariable Long id) {
+        mitgliederverwaltungService.deleteMitgliedById(id);
     }
 }
 

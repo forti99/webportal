@@ -20,11 +20,17 @@ public class Mitglied {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "alter", columnDefinition = "TEXT")
-    private String alter;
-
-    @Column(name = "adresse", columnDefinition = "TEXT")
+    @Column(name = "adresse")
     private String adresse;
+
+    @Column(name = "alter")
+    private Integer alter;
+
+    @Column(name = "beitrag")
+    private Double beitrag;
+
+    @Column(name = "eintrittsalter")
+    private Integer eintrittsalter;
 
     public Long getMitgliedId() {
         return mitgliedId;
@@ -50,20 +56,36 @@ public class Mitglied {
         this.name = name;
     }
 
-    public String getAlter() {
+    public Integer getAlter() {
         return alter;
     }
 
-    public void setAlter(String amount) {
-        this.alter = amount;
+    public void setAlter(Integer alter) {
+        this.alter = alter;
     }
 
     public String getAdresse() {
         return adresse;
     }
 
-    public void setAdresse(String price) {
-        this.adresse = price;
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public Double getBeitrag() {
+        return beitrag;
+    }
+
+    public void setBeitrag(Double beitrag) {
+        this.beitrag = beitrag;
+    }
+
+    public Integer getEintrittsalter() {
+        return eintrittsalter;
+    }
+
+    public void setEintrittsalter(Integer eintrittsalter) {
+        this.eintrittsalter = eintrittsalter;
     }
 }
 

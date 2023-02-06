@@ -27,8 +27,8 @@ public class MitgliederverwaltungService {
         return mitgliedRepository.findByMitgliedId(id);
     }
 
-    public void deleteMitglied(Mitglied mitglied) {
-        getMitgliedRepository().delete(mitglied);
+    public void deleteMitgliedById(Long id) {
+        getMitgliedRepository().deleteById(id);
     }
 
     public MitgliedRepository getMitgliedRepository() {

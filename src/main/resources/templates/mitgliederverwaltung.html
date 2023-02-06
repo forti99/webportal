@@ -23,11 +23,17 @@
         <label>Nachname:
             <input name="name" type="text" placeholder="Nachname eingeben"/>
         </label><br>
+        <label>Adresse:
+            <input name="adresse" type="text" placeholder="Adresse eingeben"/>
+        </label><br>
         <label>Alter:
             <input name="alter" type="number" placeholder="Alter eingeben"/>
         </label><br>
-        <label>Adresse:
-            <input name="adresse" type="text" placeholder="Adresse eingeben"/>
+        <label>monatlicher Beitrag in €:
+            <input name="beitrag" type="number" placeholder="Beitrag eingeben"/>
+        </label><br>
+        <label>Eintrittsalter:
+            <input name="eintrittsalter" type="number" placeholder="Eintrittsalter eingeben"/>
         </label><br>
         <button type="submit" id="saveMember">Angaben speichern</button>
     </form>
@@ -42,14 +48,25 @@
     </form>
     <table id="mitglied">
         <tr>
-            <th style="width:20%">Mitglieds-Id</th>
-            <th style="width:20%">Vorname</th>
-            <th style="width:20%">Nachname</th>
-            <th style="width:20%">Alter</th>
-            <th style="width:20%">Adresse</th>
+            <th style="width:14.286%">Mitglieds-Id</th>
+            <th style="width:14.286%">Vorname</th>
+            <th style="width:14.286%">Nachname</th>
+            <th style="width:14.286%">Adresse</th>
+            <th style="width:14.286%">Alter</th>
+            <th style="width:14.286%">monatlicher Beitrag in €</th>
+            <th style="width:14.286%">Eintrittsalter</th>
         </tr>
     </table>
 </div>
+<div>
+    <h2>Mitglied löschen</h2>
+</div>
+<form id="loeschenMitgliedsdaten">
+    <label>Mitglieds-Id:
+        <input id="id" type="number" placeholder="Id eingeben"/>
+    </label>
+    <button type="submit" id="deleteMitgliedById">Mitglied löschen</button>
+</form>
 <footer>
     <p><a href="/">Startseite</a></p>
     <p><a href="/datenuebersicht">Datenübersicht</a></p>

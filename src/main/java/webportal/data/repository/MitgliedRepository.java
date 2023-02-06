@@ -9,7 +9,10 @@ import java.util.List;
 @Repository
 public interface MitgliedRepository extends JpaRepository<Mitglied, Long> {
 
-    Mitglied findByMitgliedId(Long Id);
+    Mitglied findByMitgliedId(Long id);
+
+    @Override
+    void deleteById(Long id);
 
     @Override
     List<Mitglied> findAll();
