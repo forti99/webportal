@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MitgliedService {
+public class MitgliederverwaltungService {
 
     private final MitgliedRepository mitgliedRepository;
 
-    public MitgliedService(MitgliedRepository mitgliedRepository) {
+    public MitgliederverwaltungService(MitgliedRepository mitgliedRepository) {
         this.mitgliedRepository = mitgliedRepository;
     }
 
