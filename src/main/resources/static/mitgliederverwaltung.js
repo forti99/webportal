@@ -19,7 +19,7 @@ const saveMitgliedDaten = (event) => {
     console.log(result);
 }
 
-const showOneMitglieder = (event) => {
+const showOneMitglied = (event) => {
     event.preventDefault();
     let id = parseFloat(document.getElementById("idMitglied").value);
     $.get(`http://localhost:8080/mitgliederverwaltung/abrufenNachId/${id}`, null, function (data) {
@@ -67,5 +67,5 @@ const deleteMitgliedById = (event) => {
 }
 
 document.getElementById("saveMember").addEventListener('click', saveMitgliedDaten);
-document.getElementById("getMitgliedById").addEventListener('click', showOneMitglieder);
+document.getElementById("getMitgliedById").addEventListener('click', showOneMitglied);
 document.getElementById("deleteMitgliedById").addEventListener('click', deleteMitgliedById);

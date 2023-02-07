@@ -26,12 +26,39 @@
         <label>gewünschtes Renteneintrittsalter:
             <input id="eintrittsalter" type="number" placeholder="Renteneintrittsalter"/>
         </label><br>
-        <button type="submit" id="beitragBerechnen">Beitrag berechnen</button>
+        <button type="submit" id="beitragBerechnen">Rente berechnen</button>
     </form>
     <label>Zu erwartende Rente in €/Monat:
         <output id="ergebnisRente">000</output>
     </label>
 </div>
+<div>
+    <h2>Mitgliederrente ausrechnen</h2>
+</div>
+<div>
+    <form>
+        <input name="Mitglieds-Id" id="idMitglied" type="number" placeholder="Mitglieds-Id eingeben"/>
+        <button type="submit" id="getMitgliedById">Mitglied anzeigen und Rente berechnen</button>
+    </form>
+    <div>
+        <h3>Mitgliedsdaten</h3>
+    </div>
+    <table id="mitglied">
+        <tr>
+            <th style="width:14.286%">Mitglieds-Id</th>
+            <th style="width:14.286%">Vorname</th>
+            <th style="width:14.286%">Nachname</th>
+            <th style="width:14.286%">Adresse</th>
+            <th style="width:14.286%">Alter</th>
+            <th style="width:14.286%">monatlicher Beitrag in €</th>
+            <th style="width:14.286%">Eintrittsalter</th>
+        </tr>
+    </table>
+</div>
+<br>
+<label>Zu erwartende Rente in €/Monat:
+    <output id="ergebnisMitgliedRente">000</output>
+</label>
 <footer>
     <p><a href="/">Startseite</a></p>
     <p><a href="/mitgliederverwaltung">Mitgliederverwaltung</a></p>
