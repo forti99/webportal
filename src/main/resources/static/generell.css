@@ -71,6 +71,7 @@ table {
 }
 
 th, td {
+    text-align: center;
     border: 1px solid #34495e;
     padding: 8px;
 }
@@ -86,7 +87,6 @@ tr:nth-child(even) {
 
 /* Footer */
 footer {
-    position: fixed;
     bottom: 0;
     padding: 5px;
     width: 100%;

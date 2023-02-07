@@ -35,4 +35,43 @@ const showAllMitglieder = (event) => {
     })
 }
 
-document.getElementById('getAllMitglieder').addEventListener('click', showAllMitglieder);
+const showAllMitgliederRente = (event) => {
+    event.preventDefault();
+    $.get("http://localhost:8080/datenuebersicht/alleAbrufen", null, function (data) {
+        const mainContainer = document.getElementById("mitgliederRente");
+        const saveTr = mainContainer.firstElementChild;
+        mainContainer.innerHTML = "";
+        mainContainer.appendChild(saveTr);
+        for (let i = 0; i < data.length; i++) {
+            const tr = document.createElement("tr");
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+            const td3 = document.createElement("td");
+            const td4 = document.createElement("td");
+
+            td1.innerHTML = data[i].mitgliedId;
+            td2.innerHTML = data[i].vorname;
+            td3.innerHTML = data[i].name;
+
+            mainContainer.appendChild(tr);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            console.log(data)
+
+            let alter = data[i].alter;
+            let beitrag = data[i].beitrag;
+            let eintrittsalter = data[i].eintrittsalter;
+
+            $.get(`http://localhost:8080/rechner/${alter}/${beitrag}/${eintrittsalter}`, null, function (data) {
+                td4.innerHTML = data;
+                tr.appendChild(td4);
+                console.log(data);
+            })
+        }
+    })
+}
+
+
+document.getElementById("getAllMitglieder").addEventListener('click', showAllMitglieder);
+document.getElementById("getAllMitgliederRente").addEventListener('click', showAllMitgliederRente);
