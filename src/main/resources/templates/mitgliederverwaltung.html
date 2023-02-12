@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="generell.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <title>Mitgliederverwaltung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="mitgliederverwaltung.js" defer></script>
+</head>
+<body>
+<div>
+    <h1>Mitgliederverwaltung</h1>
+</div>
+<div>
+    <h2>Neues Mitglied registrieren</h2>
+</div>
+<div>
+    <form id="eingabeMitgliedsdaten">
+        <label>Vorname:
+            <input name="vorname" type="text" placeholder="Vornamen eingeben"/>
+        </label><br>
+        <label>Nachname:
+            <input name="name" type="text" placeholder="Nachname eingeben"/>
+        </label><br>
+        <label>Adresse:
+            <input name="adresse" type="text" placeholder="Adresse eingeben"/>
+        </label><br>
+        <label>Alter:
+            <input name="alter" type="number" placeholder="Alter eingeben"/>
+        </label><br>
+        <label>monatlicher Beitrag in €:
+            <input name="beitrag" type="number" placeholder="Beitrag eingeben"/>
+        </label><br>
+        <label>Eintrittsalter:
+            <input name="eintrittsalter" type="number" placeholder="Eintrittsalter eingeben"/>
+        </label><br>
+        <button type="submit" id="saveMember">Mitglied registrieren</button>
+    </form>
+</div>
+<div>
+    <h2>Hier sehen sie ausgewählte Mitglieder und ihre Daten</h2>
+</div>
+<div>
+    <form>
+        <input name="Mitglieds-Id" id="idMitglied" type="number" placeholder="Mitglieds-Id eingeben"/>
+        <button type="submit" id="getMitgliedById">Mitglied anzeigen</button>
+    </form>
+    <table id="mitglied">
+        <tr>
+            <th style="width:14.286%">Mitglieds-Id</th>
+            <th style="width:14.286%">Vorname</th>
+            <th style="width:14.286%">Nachname</th>
+            <th style="width:14.286%">Adresse</th>
+            <th style="width:14.286%">Alter</th>
+            <th style="width:14.286%">monatlicher Beitrag in €</th>
+            <th style="width:14.286%">Eintrittsalter</th>
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>Mitglied löschen</h2>
+</div>
+<form id="loeschenMitgliedsdaten">
+    <label>Mitglieds-Id:
+        <input id="id" type="number" placeholder="Id eingeben"/>
+    </label>
+    <button type="submit" id="deleteMitgliedById">Mitglied löschen</button>
+</form>
+<footer>
+    <p><a href="/">Startseite</a></p>
+    <p><a href="/datenuebersicht">Datenübersicht</a></p>
+    <p><a href="/rechner">Tarif-Rechner</a></p>
+</footer>
+</body>
+</html>

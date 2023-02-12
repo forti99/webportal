@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MitgliedService {
+public class MitgliederverwaltungService {
 
     private final MitgliedRepository mitgliedRepository;
 
-    public MitgliedService(MitgliedRepository mitgliedRepository) {
+    public MitgliederverwaltungService(MitgliedRepository mitgliedRepository) {
         this.mitgliedRepository = mitgliedRepository;
     }
 
@@ -23,8 +23,12 @@ public class MitgliedService {
         return getMitgliedRepository().findAll();
     }
 
-    public void deleteMitglied(Mitglied mitglied) {
-        getMitgliedRepository().delete(mitglied);
+    public Mitglied getMitgliedById(Long id) {
+        return mitgliedRepository.findByMitgliedId(id);
+    }
+
+    public void deleteMitgliedById(Long id) {
+        getMitgliedRepository().deleteById(id);
     }
 
     public MitgliedRepository getMitgliedRepository() {

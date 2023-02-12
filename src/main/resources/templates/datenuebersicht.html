@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    <link rel="stylesheet" href="generell.css">
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <title>Datenübersicht</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="datenuebersicht.js" defer></script>
+</head>
+<body>
+<div>
+    <h1>Datenübersicht</h1>
+</div>
+<div>
+    <h2>Daten aller Mitglieder</h2>
+</div>
+<div>
+    <form>
+        <button type="submit" id="getAllMitglieder">Alle Mitglieder anzeigen</button>
+    </form>
+    <table id="mitglieder">
+        <tr>
+            <th style="width:14.286%">Mitglieds-Id</th>
+            <th style="width:14.286%">Vorname</th>
+            <th style="width:14.286%">Nachname</th>
+            <th style="width:14.286%">Adresse</th>
+            <th style="width:14.286%">Alter</th>
+            <th style="width:14.286%">monatlicher Beitrag in €</th>
+            <th style="width:14.286%">Eintrittsalter</th>
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>Voraussichtliche Renten aller Mitglieder</h2>
+</div>
+<div>
+    <form>
+        <button type="submit" id="getAllMitgliederRente">Voraussichtliche Renten aller Mitglieder anzeigen</button>
+    </form>
+    <table id="mitgliederRente">
+        <tr>
+            <th style="width:25%">Mitglieds-Id</th>
+            <th style="width:25%">Vorname</th>
+            <th style="width:25%">Nachname</th>
+            <th style="width:25%">Voraussichtliche Rente (in €/Monat)</th>
+        </tr>
+    </table>
+</div>
+<footer>
+    <p><a href="/">Startseite</a></p>
+    <p><a href="/mitgliederverwaltung">Mitgliederverwaltung</a></p>
+    <p><a href="/rechner">Tarif-Rechner</a></p>
+</footer>
+</body>
+</html>
+
