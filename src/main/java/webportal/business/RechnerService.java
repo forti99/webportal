@@ -10,7 +10,7 @@ public class RechnerService {
 
 
     public double renteBerechnen(int alter, Long monatlicherBeitrag, int eintrittsalter) {
-        if (alter >= eintrittsalter || monatlicherBeitrag <= 0) {
+        if (alter >= eintrittsalter || monatlicherBeitrag <= 0 || alter < 0) {
             return (long) -1; //ungültige Angaben
         } else {
             return monatlicheRenteBerechnen(alter, monatlicherBeitrag, eintrittsalter);
